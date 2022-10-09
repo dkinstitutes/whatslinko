@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsLinko - Generate Link For WhatsApp Account</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Create WhatsApp ">
+  <meta name="keywords" content="Create WhatsApp links, whatsapp link, whatsapp link generator, whatsapp profile link">
+  <meta name="author" content="Dilawar Khan">
+</head>
+<body>
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="">WhatsLinko</a>
+      </div>
+      <nav>
+        <div class="nav-mobile">
+          <a id="nav-toggle" href="#!"><span></span></a>
+        </div>
+        <ul class="nav-list">
+          <!-- Setting the links to #! will ensure that no action takes place on click. -->
+          <li><a href="#!">Fancy Namer</a></li>
+          <li><a href="#!">Agelator</a></li>
+          <li><a href="#!">BrainExise</a>
+          </li>
+          <li><a href="#!">Passrator</a></li>
+          <li><a href="#!"> Lovelator</a></li>
+          <li><a href="#!"> Rendom Text</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+<div id="app">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Generate Your WhatsApp Account Link</h1>
+        <p>Generate your whatsapp account link and share it to friends instead of sharing your WA number - Proudly Developed by <a href="https://dkinstitutes.com/my-portfolio/"> Dilawar Khan❤ </a> 
+        
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-sm-12">
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Your WhatsApp Number (with country code)</label>
+          <input type="number" v-model="number" class="form-control" id="telephone" aria-describedby="numberHelp" placeholder="Enter your telephone">
+          <small id="numberHelp" class="form-text text-muted">Enter your whatsApp Number with Country Code to Create Link.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">A pre-filled message that will automatically appear in the text field of the chat <span class="small">(optional)</span></label>
+          <input type="message" v-model="message" class="form-control" id="message" placeholder="I would like to request a quote" describedby="messageHelp">
+          <small id="messageHelp" class="form-text text-muted">An optional message that appeares on recipient chat.</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="generate-url" :disabled="number == ''" @click="generateUrl">Generate WhatsApp Link</button>
+      </div>
+      <div class="col-sm-12">
+        <br>
+        <h4>Your URL and QR code <span v-if="whatsappurl == ''">will show below once you fill out the form and press generate</span></h4>
+        <pre id="generated-url" v-if="whatsappurl !== ''">{{whatsappurl}}</pre>
+        <br>
+        <div id="qr-code">
+
+        </div>
+        <p class="small">To find out more about how this works see this link from the <a href="https://faq.whatsapp.com/en/android/26000030/">WhatsApp API</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js'></script>
+<script  src="script.js"></script>
+
+</body>
+</html>
